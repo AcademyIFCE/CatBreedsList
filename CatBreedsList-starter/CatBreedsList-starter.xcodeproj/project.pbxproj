@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0629FED02842715C007EB1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0660A83B2840FD4A0062A70D /* CatBreedsList-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CatBreedsList-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0660A83E2840FD4A0062A70D /* CatBreedsList_starterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedsList_starterApp.swift; sourceTree = "<group>"; };
 		0660A8402840FD4A0062A70D /* CatBreedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedList.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		0660A83D2840FD4A0062A70D /* CatBreedsList-starter */ = {
 			isa = PBXGroup;
 			children = (
+				0629FED02842715C007EB1FC /* Info.plist */,
 				0660A83E2840FD4A0062A70D /* CatBreedsList_starterApp.swift */,
 				0660A8572841492D0062A70D /* Service */,
 				0660A856284149270062A70D /* Model */,
@@ -314,6 +316,7 @@
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CatBreedsList-starter/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +347,7 @@
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CatBreedsList-starter/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

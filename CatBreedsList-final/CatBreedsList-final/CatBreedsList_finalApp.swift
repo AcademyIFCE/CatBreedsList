@@ -12,6 +12,7 @@ struct CatBreedsList_finalApp: App {
     var body: some Scene {
         WindowGroup {
             CatBreedList()
+                .statusBar(hidden: true)
         }
     }
 }

@@ -1,6 +1,6 @@
 //
 //  CatBreedsList_finalApp.swift
-//  CatBreedsList-final
+//  CatBreedsList-starter
 //
 //  Created by Gabriela Bezerra on 27/05/22.
 //
@@ -12,6 +12,7 @@ struct CatBreedsList_finalApp: App {
     var body: some Scene {
         WindowGroup {
             CatBreedList()
+                .statusBar(hidden: true)
         }
     }
 }

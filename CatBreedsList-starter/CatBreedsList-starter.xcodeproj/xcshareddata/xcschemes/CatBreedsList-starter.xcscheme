@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0660A83A2840FD4A0062A70D"
-               BuildableName = "CatBreedsList-final.app"
+               BuildableName = "CatBreedsList-starter.app"
                BlueprintName = "CatBreedsList-starter"
                ReferencedContainer = "container:CatBreedsList-starter.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0660A83A2840FD4A0062A70D"
-            BuildableName = "CatBreedsList-final.app"
+            BuildableName = "CatBreedsList-starter.app"
             BlueprintName = "CatBreedsList-starter"
             ReferencedContainer = "container:CatBreedsList-starter.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0660A83A2840FD4A0062A70D"
-            BuildableName = "CatBreedsList-final.app"
+            BuildableName = "CatBreedsList-starter.app"
             BlueprintName = "CatBreedsList-starter"
             ReferencedContainer = "container:CatBreedsList-starter.xcodeproj">
          </BuildableReference>

@@ -1,6 +1,6 @@
 //
 //  CatBreedCell.swift
-//  CatBreedsList-final
+//  CatBreedsList-starter
 //
 //  Created by Gabriela Bezerra on 27/05/22.
 //
@@ -10,7 +10,6 @@ import SwiftUI
 struct CatBreedCell: View {
     
     @State var favorite: Bool = false
-    @State var loadingFavorite: Bool = false
 
     let catBreed: CatBreed
     let addFavoriteHandler: ((CatBreed) async -> Bool)
@@ -46,36 +45,43 @@ struct CatBreedCell: View {
             Button(
                 action: {
                     Task {
+                        withAnimation { favorite.toggle() }
                         if favorite {
-                            loadingFavorite = true
-                            if await removeFavoriteHandler(catBreed) {
-                                favorite = false
+                            let success = await addFavoriteHandler(catBreed) 
+                            if !success {  
+                                withAnimation { favorite.toggle() }
                             }
-                            loadingFavorite = false
                         } else {
-                            loadingFavorite = true
-                            if await addFavoriteHandler(catBreed) {
-                                favorite = true
+                            let success = await removeFavoriteHandler(catBreed)
+                            if !success { 
+                                withAnimation { favorite.toggle() }
                             }
-                            loadingFavorite = false
                         }
                     }
                 }, 
                 label: {
                     HStack(spacing: 4) {
                         ZStack {
-                            if loadingFavorite {
-                                ProgressView()
-                                    .progressViewStyle(.circular)
-                                    .scaleEffect(1.2)
-                            } else {
-                                Image(systemName: favorite ? "heart.fill" : "heart")
-                                    .font(.system(size: 30))    
-                            }
+                            Image(systemName: "heart")
+                                .font(.system(size: 30))
+                            Image(systemName: "heart.fill")
+                                .font(.system(size: 30))
+                                .opacity(favorite ? 1: 0)
+                                .scaleEffect(favorite ? 1 : 0.1)
                         }
                         .frame(width: 30)
-                        Text(favorite ? "Meow" : "Favorite Me")
-                            .font(favorite ? .system(size: 18, weight: .medium, design: .rounded) : .system(size: 18).italic())
+                        ZStack(alignment: .leading) {
+                            Text("Favorite Me")
+                                .font(.system(size: 18, weight: .medium))
+                                .opacity(favorite ? 0 : 1)
+                                .scaleEffect(favorite ? 0.1 : 1)
+                                .frame(width: favorite ? 0.1 : 99)
+                            Text("Meow")
+                                .font(.system(size: 18, weight: .medium, design: .rounded).italic())
+                                .opacity(favorite ? 1 : 0)
+                                .scaleEffect(favorite ? 1 : 0.1)
+                                .frame(width: favorite ? 50 : 0.1)
+                        }
                     }
                     .foregroundColor(favorite ? .pink : .black)
                     .frame(height: 30)

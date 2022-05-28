@@ -21,7 +21,7 @@ struct CatBreedList: View {
             }
         }
         .task {
-            await viewModel.fetchCatsMock()
+            await viewModel.fetchCats()
         }
     }
     
