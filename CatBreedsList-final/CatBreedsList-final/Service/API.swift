@@ -26,7 +26,7 @@ class API {
         return []
     }
     
-    static func getFavourites() async -> [Favourite] {
+    static func getFavorites() async -> [Favorite] {
         var urlRequest = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/favourites")!)
         urlRequest.allHTTPHeaderFields = [
             "x-api-key": "5cffc6c8-0e59-497e-a9ef-d1b266411e9c"
@@ -34,14 +34,14 @@ class API {
         
         do {
             let (data, _) = try await URLSession.shared.data(for: urlRequest)
-            return try JSONDecoder().decode([Favourite].self, from: data)
+            return try JSONDecoder().decode([Favorite].self, from: data)
         } catch {
             print(error)
         }
         return []
     }
     
-    static func addFavourite(cat: CatBreed) async -> Bool {
+    static func addFavorite(cat: CatBreed) async -> Bool {
         guard let imageID = cat.image?.id else { return false }
         
         var urlRequest = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/favourites")!)
@@ -52,7 +52,7 @@ class API {
         ]
 
         do {
-            urlRequest.httpBody = try JSONEncoder().encode(Favourite(imageID: imageID, subID: "User-123")) 
+            urlRequest.httpBody = try JSONEncoder().encode(Favorite(imageID: imageID, subID: "User-123"))
             let (_, response) = try await URLSession.shared.data(for: urlRequest)
             if let responseHeader = response as? HTTPURLResponse {
                 return (responseHeader.statusCode == 200)
@@ -63,11 +63,11 @@ class API {
         return false
     }
     
-    static func removeFavourite(_ favouriteID: Int) async -> Bool {
+    static func removeFavorite(_ favoriteID: Int) async -> Bool {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.thecatapi.com"
-        components.path = "/v1/favourites/\(favouriteID)"
+        components.path = "/v1/favourites/\(favoriteID)"
         let url = components.url!
         
         var urlRequest = URLRequest(url: url)

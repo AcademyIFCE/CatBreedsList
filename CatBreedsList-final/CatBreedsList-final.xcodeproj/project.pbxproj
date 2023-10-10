@@ -15,7 +15,7 @@
 		0660A84F2840FDD00062A70D /* CatBreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A84E2840FDD00062A70D /* CatBreedViewModel.swift */; };
 		0660A8512840FDEA0062A70D /* BreedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A8502840FDEA0062A70D /* BreedsModel.swift */; };
 		0660A853284147230062A70D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A852284147230062A70D /* API.swift */; };
-		0660A8552841491D0062A70D /* FavouritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A8542841491D0062A70D /* FavouritesModel.swift */; };
+		0660A8552841491D0062A70D /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A8542841491D0062A70D /* FavoritesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		0660A84E2840FDD00062A70D /* CatBreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedViewModel.swift; sourceTree = "<group>"; };
 		0660A8502840FDEA0062A70D /* BreedsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsModel.swift; sourceTree = "<group>"; };
 		0660A852284147230062A70D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		0660A8542841491D0062A70D /* FavouritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesModel.swift; sourceTree = "<group>"; };
+		0660A8542841491D0062A70D /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		0660A856284149270062A70D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0660A8542841491D0062A70D /* FavouritesModel.swift */,
+				0660A8542841491D0062A70D /* FavoritesModel.swift */,
 				0660A8502840FDEA0062A70D /* BreedsModel.swift */,
 			);
 			path = Model;
@@ -142,7 +142,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0660A83A2840FD4A0062A70D = {
 						CreatedOnToolsVersion = 13.4;
@@ -187,7 +187,7 @@
 				0660A8512840FDEA0062A70D /* BreedsModel.swift in Sources */,
 				0660A84F2840FDD00062A70D /* CatBreedViewModel.swift in Sources */,
 				0660A84D2840FDBD0062A70D /* CatBreedCell.swift in Sources */,
-				0660A8552841491D0062A70D /* FavouritesModel.swift in Sources */,
+				0660A8552841491D0062A70D /* FavoritesModel.swift in Sources */,
 				0660A8412840FD4A0062A70D /* CatBreedList.swift in Sources */,
 				0660A853284147230062A70D /* API.swift in Sources */,
 				0660A83F2840FD4A0062A70D /* CatBreedsList_finalApp.swift in Sources */,
@@ -201,6 +201,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -233,6 +234,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -261,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -293,6 +296,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

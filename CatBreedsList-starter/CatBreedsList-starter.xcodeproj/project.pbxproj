@@ -14,6 +14,7 @@
 		0660A84D2840FDBD0062A70D /* CatBreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A84C2840FDBD0062A70D /* CatBreedCell.swift */; };
 		0660A84F2840FDD00062A70D /* CatBreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A84E2840FDD00062A70D /* CatBreedViewModel.swift */; };
 		0660A85B2841875B0062A70D /* BreedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660A85A2841875B0062A70D /* BreedsModel.swift */; };
+		433AFE772AD584730070C5ED /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AFE762AD584730070C5ED /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0660A84C2840FDBD0062A70D /* CatBreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedCell.swift; sourceTree = "<group>"; };
 		0660A84E2840FDD00062A70D /* CatBreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedViewModel.swift; sourceTree = "<group>"; };
 		0660A85A2841875B0062A70D /* BreedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedsModel.swift; sourceTree = "<group>"; };
+		433AFE762AD584730070C5ED /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 			children = (
 				0629FED02842715C007EB1FC /* Info.plist */,
 				0660A83E2840FD4A0062A70D /* CatBreedsList_starterApp.swift */,
-				0660A8572841492D0062A70D /* Service */,
+				433AFE782AD584790070C5ED /* Service */,
 				0660A856284149270062A70D /* Model */,
 				0660A8592841493E0062A70D /* View */,
 				0660A858284149360062A70D /* ViewModel */,
@@ -86,13 +88,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0660A8572841492D0062A70D /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		0660A858284149360062A70D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +103,14 @@
 				0660A84C2840FDBD0062A70D /* CatBreedCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		433AFE782AD584790070C5ED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				433AFE762AD584730070C5ED /* API.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +187,7 @@
 				0660A84D2840FDBD0062A70D /* CatBreedCell.swift in Sources */,
 				0660A85B2841875B0062A70D /* BreedsModel.swift in Sources */,
 				0660A8412840FD4A0062A70D /* CatBreedList.swift in Sources */,
+				433AFE772AD584730070C5ED /* API.swift in Sources */,
 				0660A83F2840FD4A0062A70D /* CatBreedsList_starterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

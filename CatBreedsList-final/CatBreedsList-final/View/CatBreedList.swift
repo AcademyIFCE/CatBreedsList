@@ -41,7 +41,7 @@ struct CatBreedList: View {
             ForEach(viewModel.catBreeds, id: \.id) { cat in
                 CatBreedCell(
                     catBreed: cat,
-                    beginsFavourited: viewModel.favorites.contains { cat.id == $0.id },
+                    beginsFavorited: viewModel.favorites.contains { cat.id == $0.id },
                     addFavoriteHandler: {
                         await viewModel.addFavorite(cat: $0)
                     },

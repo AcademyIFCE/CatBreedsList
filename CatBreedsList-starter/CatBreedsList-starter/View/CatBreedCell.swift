@@ -17,12 +17,12 @@ struct CatBreedCell: View {
     
     init(
         catBreed: CatBreed, 
-        beginsFavourited: Bool, 
+        beginsFavorited: Bool, 
         addFavoriteHandler: @escaping ((CatBreed) async -> Bool), 
         removeFavoriteHandler: @escaping ((CatBreed) async -> Bool)
     ) {
         self.catBreed = catBreed
-        self.favorite = beginsFavourited
+        self.favorite = beginsFavorited
         self.addFavoriteHandler = addFavoriteHandler
         self.removeFavoriteHandler = removeFavoriteHandler
     }

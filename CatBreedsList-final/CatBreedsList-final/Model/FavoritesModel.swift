@@ -1,5 +1,5 @@
 //
-//  FavouritesModel.swift
+//  Favorite.swift
 //  CatBreedsList-final
 //
 //  Created by Gabriela Bezerra on 27/05/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Favourite: Codable {
+struct Favorite: Codable {
     let id: Int?
     let imageID: String
     let subID: String

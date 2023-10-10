@@ -41,13 +41,13 @@ struct CatBreedList: View {
             ForEach(viewModel.catBreeds, id: \.id) { cat in
                 CatBreedCell(
                     catBreed: cat,
-                    beginsFavourited: viewModel.favorites.contains { cat.id == $0.id },
+                    beginsFavorited: viewModel.favorites.contains { cat.id == $0.id },
                     addFavoriteHandler: { _ in
-                        print("Add Favourite")
+                        print("Add Favorite")
                         return true
                     },
                     removeFavoriteHandler: { _ in
-                        print("Remove Favourite")
+                        print("Remove Favorite")
                         return true
                     }
                 )

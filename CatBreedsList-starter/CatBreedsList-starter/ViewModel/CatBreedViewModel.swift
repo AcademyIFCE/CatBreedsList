@@ -13,21 +13,21 @@ class CatBreedViewModel: ObservableObject {
     @Published var favorites: [CatBreed] = []
     
     @MainActor
-    func publishCats(cats: [CatBreed], favourites: [CatBreed]) {
+    func publishCats(cats: [CatBreed], favorites: [CatBreed]) {
         self.catBreeds = cats
-        self.favorites = favourites
+        self.favorites = favorites
     }
     
     func fetchCatsMock() async {
         await publishCats(
             cats: [
-                CatBreed(id: "favourite", name: "Favourite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+                CatBreed(id: "id0", name: "Favorite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
                 CatBreed(id: "id1", name: "Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
                 CatBreed(id: "id2", name: "Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
                 CatBreed(id: "id3", name: "Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
             ],
-            favourites: [
-                CatBreed(id: "favourite", name: "Favourite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+            favorites: [
+                CatBreed(id: "favorite", name: "Favorite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
             ]
         )
     }

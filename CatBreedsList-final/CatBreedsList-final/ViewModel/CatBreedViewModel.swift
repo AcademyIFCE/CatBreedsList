@@ -14,41 +14,41 @@ class CatBreedViewModel: ObservableObject {
     
     
     @MainActor
-    func publishCats(cats: [CatBreed], favourites: [CatBreed]) {
+    func publishCats(cats: [CatBreed], favorites: [CatBreed]) {
         self.catBreeds = cats
-        self.favorites = favourites
+        self.favorites = favorites
     }
     
 //    func fetchCatsMock() async {
 //        await publishCats(
 //            cats: [
-//                CatBreed(id: "favourite", name: "Favourite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+//                CatBreed(id: "favorite", name: "favorite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
 //                CatBreed(id: "id", name: "Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
 //                CatBreed(id: "id", name: "Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
 //                CatBreed(id: "id", name: "Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
 //            ],
-//            favourites: [
-//                CatBreed(id: "favourite", name: "Favourite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+//            favorites: [
+//                CatBreed(id: "favorite", name: "favorite Cat", lifeSpan: "14 to 18", image: BreedImage(id: "0", url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
 //            ]
 //        )
 //    }
     
     func fetchCats() async {
         let allCats = await fetchCatWithImages()
-        let favouriteCats = await fetchFavouriteCats(cats: allCats)
-        await publishCats(cats: allCats, favourites: favouriteCats)
+        let favoriteCats = await fetchFavoriteCats(cats: allCats)
+        await publishCats(cats: allCats, favorites: favoriteCats)
     }
     
     private func fetchCatWithImages() async -> [CatBreed] {
         await API.getBreedsWithImage()
     }
     
-    private func fetchFavouriteCats(cats: [CatBreed]) async -> [CatBreed] {
-        let favourites = await API.getFavourites()
+    private func fetchFavoriteCats(cats: [CatBreed]) async -> [CatBreed] {
+        let favorites = await API.getFavorites()
         var newCats: [CatBreed] = []
         for cat in cats {
-            let catIsInFavourites = favourites.contains { $0.imageID == cat.image!.id }
-            if catIsInFavourites {
+            let catIsInFavorites = favorites.contains { $0.imageID == cat.image!.id }
+            if catIsInFavorites {
                 newCats.append(cat)
             }
         }
@@ -56,14 +56,14 @@ class CatBreedViewModel: ObservableObject {
     }
     
     func addFavorite(cat: CatBreed) async -> Bool {
-        await API.addFavourite(cat: cat)
+        await API.addFavorite(cat: cat)
     }
     
     func removeFavorite(cat: CatBreed) async -> Bool {
-        let favourites = await API.getFavourites()
-        let favourite = favourites.first { $0.imageID == cat.image!.id }
-        if let id = favourite?.id {
-            return await API.removeFavourite(id)
+        let favorites = await API.getFavorites()
+        let favorite = favorites.first { $0.imageID == cat.image!.id }
+        if let id = favorite?.id {
+            return await API.removeFavorite(id)
         }
         return false
     }
